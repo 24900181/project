@@ -27,304 +27,98 @@ Developed by :Nethra.K  REGISTER NUMBER: 212224230184
 # PROGRAM :
 ```
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Design Portfolio</title>
+    <title>Dribbble Clone</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<style>
-    /* Reset and basic styles */
-body, h1, h2, p, a, input, button {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
-body {
-    background-color: #f5f5f5;
-    color: #333;
-}
-
-/* Top Bar Styling */
-.top-bar {
-    display: flex;
-    align-items: center;
-    background-color: #ffffff;
-    padding: 10px 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.search-bar {
-    margin-right: 15px;
-    padding: 8px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    outline: none;
-}
-
-.nav-item {
-    margin: 0 10px;
-    color: #333;
-    text-decoration: none;
-}
-
-.blue-text {
-    color: #007bff;
-    font-weight: bold;
-}
-
-.blue-text:hover {
-    text-decoration: underline;
-}
-
-/* Header Section */
-header {
-    background-image: url('download.jpg');   /* Add your header image */
-    background-size: cover;
-    padding: 80px 20px;
-    text-align: center;
-    color: #fff;
-}
-
-.header-content h1 {
-    font-size: 36px;
-    margin-bottom: 10px;
-}
-
-.header-content p {
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-
-.search-input {
-    padding: 10px;
-    width: 60%;
-    max-width: 500px;
-    border: none;
-    border-radius: 4px;
-    outline: none;
-}
-
-/* Trending Searches Section */
-.trending {
-    padding: 20px;
-    text-align: center;
-}
-
-.trending h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.trending-tags {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.trending-tags span {
-    background-color: #007bff;
-    color: #fff;
-    padding: 5px 10px;
-    margin: 5px;
-    border-radius: 4px;
-    font-size: 14px;
-}
-
-/* Gallery Section */
-.gallery {
-    padding: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-.card {
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    overflow: hidden;
-    width: 200px;
-    text-align: center;
-}
-
-.card img {
-    width: 100%;
-    height: auto;
-}
-
-.card h3 {
-    font-size: 16px;
-    margin: 10px 0;
-}
-
-.card p {
-    font-size: 12px;
-    color: #555;
-    margin-bottom: 10px;
-}
-
-/* Gallery Section */
-.gallery {
-    padding: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-.card {
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    overflow: hidden;
-    width: 200px;
-    text-align: center;
-    position: relative;
-}
-
-.card img {
-    width: 100%;
-    height: auto;
-    transition: transform 0.3s ease;
-}
-
-.card:hover img {
-    transform: scale(1.2); /* Scale image to 120% on hover */
-}
-
-.card h3 {
-    font-size: 16px;
-    margin: 10px 0;
-}
-
-.card p {
-    font-size: 12px;
-    color: #555;
-    margin-bottom: 10px;
-}
-
-/* Footer Section */
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 20px;
-    margin-top: 20px;
-}
-</style>
 <body>
-    <!-- Top Navigation Bar -->
-    <div class="top-bar">
-        <input type="text" class="search-bar" placeholder="Search...">
-        <a href="#" class="nav-item">Explore</a>
-        <a href="#" class="nav-item">Hire a Developer</a>
-        <a href="#" class="nav-item">Designs</a>
-        <a href="#" class="nav-item">Blog</a>
-        <a href="#" class="nav-item blue-text">Sign up</a>
-        <a href="#" class="nav-item blue-text">Log in</a>
+
+<!-- Top Bar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">Dribbble Clone</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Shots</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Designers</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Community</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Jobs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Sign Up</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Sign In</a>
+                </li>
+            </ul>
+        </div>
     </div>
+</nav>
 
-    <!-- Header Section -->
-    <header>
-        <div class="header-content">
-            <h1>𝓓𝓲𝓼𝓬𝓸𝓿𝓮𝓻 𝓾𝓷𝓲𝓺𝓾𝓮 𝓪𝓷𝓭 𝓭𝓮𝓼𝓲𝓻𝓮𝓭 𝓭𝓮𝓼𝓲𝓰𝓷𝓼</h1>
-            <p>𝕎𝕙𝕒𝕥 𝕒𝕣𝕖 𝕪𝕠𝕦 𝕘𝕠𝕟𝕟𝕒 𝕕𝕖𝕤𝕚𝕘𝕟 𝕥𝕠𝕕𝕒𝕪?</p>
-            <input type="text" class="search-input" placeholder="What are you looking for?">
+<!-- Banner Section -->
+<header class="bg-light text-center py-5">
+    <div class="container">
+        <h1 class="display-4">What are you working on?</h1>
+        <p class="lead">Dribbble is a show-and-tell platform for designers. Discover, connect, and share your creations.</p>
+        <a href="#gallery" class="btn btn-primary btn-lg">Explore Now</a>
+        <a href="#" class="btn btn-outline-secondary btn-lg">Learn More</a>
+    </div>
+</header>
+
+<!-- Gallery Section -->
+<section id="gallery" class="bg-light py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Popular Shots</h2>
+        <div class="row">
+
+            <div class="col-md-3 col-sm-6 mb-4">
+                <img src="img1.png" class="img-fluid rounded" alt="Design 2">
+                <p class="mt-2 text-center">Balkan Brothers</p>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4">
+                <img src="img2.png" class="img-fluid rounded" alt="Design 3">
+                <p class="mt-2 text-center">Jan Losert</p>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4">
+                <img src="img3.png" class="img-fluid rounded" alt="Design 4">
+                <p class="mt-2 text-center">Mattias Johansson</p>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4">
+                <img src="img4.png" class="img-fluid rounded" alt="Design 5">
+                <p class="mt-2 text-center">Ruslan Siiz</p>
+            </div>
+          
+
         </div>
-    </header>
+    </div>
+</section>
 
-    <!-- Trending Searches Section -->
-    <section class="trending">
-        <h2>Trending Searches</h2>
-        <div class="trending-tags">
-            <span>Brouchers</span>
-            <span>Posters</span>
-            <span>Insta story</span>
-            <span>logo design</span>
-            <span>Thumbnail</span>
-            <span>Icons</span>
-        </div>
-    </section>
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-3">
+    
+</footer>
 
-    <!-- Gallery Section -->
-    <section class="gallery">
-
-        <div class="card">
-            <img src="Screenshot 2025-05-16 001631.png" alt="Design Sample 1">
-        </div>
-
-        <div class="card">
-            <img src="Screenshot 2025-05-15 233406.png" alt="Design Sample 2">
-        </div>
-
-        <div class="card">
-            <img src="Screenshot 2025-05-15 233656.png" alt="Design Sample 3">
-        </div>
-
-        <div class="card">
-            <img src="Screenshot 2025-05-15 232311.png" alt="Design Sample 4">
-        </div>
-
-        <div class="card">
-            <img src="Screenshot 2025-05-15 231144.png" alt="Design Sample 5">
-        </div>
-
-        <div class="card">
-            <img src="Screenshot 2025-05-15 230414.png" alt="Design Sample 6">
-        </div>
-
-        <div class="card">
-            <img src="Screenshot 2025-05-15 230359.png" alt="Design Sample 7">
-        </div>
-
-        <div class="card">
-            <img src="Screenshot 2025-05-15 230118.png" alt="Design Sample 8">
-        </div>
-
-        <div class="card">
-            <img src="Screenshot 2025-05-15 225539.png" alt="Design Sample 9">
-        </div>
-
-        <div class="card">
-            <img src="Screenshot 2025-05-15 225110.png" alt="Design Sample 10">
-        </div>
-
-        <div class="card">
-            <img src="Screenshot 2025-05-14 092843.png" alt="Design Sample 11">
-        </div>
-
-        <div class="card">
-            <img src="Screenshot 2025-05-14 092808.png" alt="Design Sample 12">
-        </div>
-        <!-- Add more cards as needed -->
-    </section>
-
-    <!-- Footer Section -->
-    <footer>
-        <p>&copy; 2025 Design Portfolio. All rights reserved.</p>
-    </footer>
-
-    <script>
-        // Search functionality
-const searchBar = document.querySelector('.search-bar');
-
-searchBar.addEventListener('keydown', function(event) {
-    if (event.key === 'Enter') {
-        event.preventDefault(); // Prevent default form submission
-        alert(Searching for: ${searchBar.value});
-    }
-});
-    </script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
 ```
 # OUTPUT:
-![image](https://github.com/user-attachments/assets/9492bf82-5d9c-471d-a6ec-6abf25ed1ccd)
-![image](https://github.com/user-attachments/assets/27fcce3d-fb12-4594-94f3-b4924aa3bae4)
+
+![Screenshot 2025-05-23 104804](https://github.com/user-attachments/assets/a7b7a4ca-8980-48ae-b977-a7032af06b9b)
 
 
 # RESULT:
